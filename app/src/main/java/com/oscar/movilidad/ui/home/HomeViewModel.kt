@@ -22,7 +22,7 @@ class HomeViewModel @Inject constructor(
     private var _countriesLiveData: MutableLiveData<List<Country>> = MutableLiveData()
     val countriesLiveData: LiveData<List<Country>>
         get() = _countriesLiveData
-    
+
     fun getCountries() = liveData {
         emit(Resource.loading(null))
         try {
